@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>att gui | Gestão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <div>
+            <span class="brand-label">ATT</span>
+            <strong>GUI</strong>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav-item active" href="#">Dashboard</a>
+          <a class="nav-item" href="#">Produtos</a>
+          <a class="nav-item" href="#">Movimentações</a>
+          <a class="nav-item" href="#">Relatórios</a>
+          <a class="nav-item" href="#">Configurações</a>
+        </nav>
+
+        <div class="status-box">
+          <span class="status-dot"></span>
+          <div>
+            <p>Servidor</p>
+            <strong>Online</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Painel geral</p>
+            <h1>Controle de estoque</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="btn btn-light">Exportar</button>
+            <button class="btn btn-primary">+ Novo item</button>
+          </div>
+        </header>
+
+        <section class="hero-card">
+          <div>
+            <p class="eyebrow accent">Resumo do dia</p>
+            <h2>Estoque em alta com 98,4% de eficiência operacional.</h2>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <span>Valor em estoque</span>
+              <strong id="valor-estoque">Carregando...</strong>
+            </div>
+            <div>
+              <span>Itens ativos</span>
+              <strong id="itens-ativos">Carregando...</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Produtos</span>
+              <span class="chip red">+12%</span>
+            </div>
+            <strong id="total-produtos">0</strong>
+            <small>Itens cadastrados</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Saídas</span>
+              <span class="chip neutral">-4%</span>
+            </div>
+            <strong id="total-saidas">0</strong>
+            <small>Movimentações registradas</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Entradas</span>
+              <span class="chip red">+9%</span>
+            </div>
+            <strong id="total-entradas">0</strong>
+            <small>Movimentações registradas</small>
+          </article>
+
+          <article class="stat-card accent-card">
+            <div class="stat-header">
+              <span>Estoque total</span>
+              <span class="chip light">Ativo</span>
+            </div>
+            <strong id="estoque-total">0</strong>
+            <small>Quantidade em unidades</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Movimentações recentes</h3>
+              <a href="#">Ver tudo</a>
+            </div>
+
+            <ul id="movement-list" class="movement-list"></ul>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Produtos em destaque</h3>
+              <a href="#">Atualizar</a>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Qtd.</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="products-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

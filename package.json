@@ -1,0 +1,20 @@
+{
+  "name": "att-gui",
+  "version": "1.0.0",
+  "description": "API para gestão de produtos e movimentações",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "nodemon serve.js",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6",
+    "nodemon": "^3.1.14"
+  }
+}
